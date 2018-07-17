@@ -10,21 +10,25 @@
 }
 
 body{
-    margin: 2%;
+    margin: 0;
 }
 
 .select-div
 {
     display: inline;
 }
-
+.mresponsive
+{
+    overflow-x:auto;
+    overflow-y:auto;
+}
 .signup-form
 {
     align-content: center;
     border-style: solid;
     border-width: 2px;
-    margin: 2% 30% !important;
-    max-width: 40% !important;
+    margin: 2% auto !important;
+    width: 40% !important;
     padding: 2%;
 }
 
@@ -32,3 +36,21 @@ body{
 {
     padding: 2%;
 }
+
+.bg-img{
+    background-image: url('http://sscgj.in/wp-content/uploads/2016/05/header01-1-1.jpg');
+    height: 60%;
+    width: auto;
+}
+
+.a-link{
+    color: black;
+}
+
+.a-link:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+
+
