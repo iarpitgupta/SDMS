@@ -1,7 +1,7 @@
 body{
     position: static;
-  
 }
+
 .sidenav {
     height: 1500px;
     width: 160px;
@@ -116,6 +116,15 @@ body{
 max-width: 35%;
 }
 
+.login-box{
+    top:50px;
+    left:1050px;
+    background-color: #3CB371;
+    width:300px;
+    opacity: 0.9
+}
+
+
 
 @media(min-width:768px) {
     #wrapper {
@@ -151,6 +160,13 @@ max-width: 35%;
     #endMargin{
         margin-top: 20px;
     }
+    .login-box{
+        top:50px;
+        left:10px!;
+        background-color: orange;
+        width:300px;
+        opacity: 0.9;
+    }
 
 
 }
@@ -174,7 +190,14 @@ max-width: 35%;
         margin-left: 0px !important;
     }
 
-
+    .login-box {
+        top: 50px;
+        left: 65px;
+        background-color: #3CB371;
+        width: 220px !important;
+        opacity: 0.9;
+        height: 243px;
+    }
 
   
 }
