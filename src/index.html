@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7DsvzR-NK_zaXOmJ47NLMarcsXpVWFtA&callback=myMap"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="Custom.css" type="">
+    <script>
+        $(function () {
+            $("header").load("./src/Header.html");
+            $("footer").load("./src/Footer.html");
+        })
+    </script>
+    <!------ Include the above in your HEAD tag ---------->
+    <title>Dashboard</title>
+</head>
+<style>
+
+    @media(min-width:768px){
+        .list1{
+            display:none!important;
+        }
+        li{
+            text-decoration: none;
+        }
+
+    }
+
+    .login-box{
+        float: right;
+        background-color: #3CB371;
+        width:300px;
+        opacity: 0.9
+    }
+
+
+</style>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<body>
+    <!-- As a link -->
+<nav class="navbar navbar-dark bg-default">
+    <img src="http://sscgj.in/wp-content/themes/skill_council/images/scgj.gif" style="width:250px;">
+    <img src="http://sscgj.in/wp-content/themes/skill_council/images/nsdc.gif">
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light"  style="background-color: rgb(1, 183, 212);">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-item nav-link active text-light font-weight-bold p-2 ml-4 " href="#">HOME <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link text-light p-2 ml-4 font-weight-bold" href="#">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link text-light p-2 ml-4 font-weight-bold" href="#">CONNECT WITH SCGJ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link disabled text-light p-2 ml-4 font-weight-bold" href="#">AFFILTIIONS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link disabled text-light p-2 ml-4 font-weight-bold" href="#">NATIONAL STANDARDS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link disabled text-light p-2 ml-4 font-weight-bold" href="#">PUBLICATION</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+<!-- body of home-->
+<div class="position-relative">
+<img src="http://sscgj.in/wp-content/uploads/2016/05/header01-1-1.jpg" class="img-fluid" alt="Responsive image" style="height:400px;height: 100%;">
+
+    <div class="container position-absolute login-box">
+        <div class="row">
+            <div class="span12">
+                <div class="" id="loginModal">
+                    <div class="modal-body">
+                        <div class="well">
+                            <div id="myTabContent" class="tab-content">
+                                <div class="tab-pane active in" id="login">
+                                    <form class="form-horizontal" action='' method="POST">
+                                        <fieldset>
+                                            <div id="legen">
+                                                <legend class="font-weight-bold text-uppercase ">Login</legend>
+                                            </div>
+                                            <div class="control-group">
+                                                <!-- Username -->
+                                                <label class="control-label"  for="username">Username</label>
+                                                <div class="controls">
+                                                    <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+                                                </div>
+                                            </div>
+
+                                            <div class="control-group">
+                                                <!-- Password-->
+                                                <label class="control-label" for="password">Password</label>
+                                                <div class="controls">
+                                                    <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="control-group">
+                                                <!-- Button -->
+                                                <div class="controls">
+                                                    <button class="btn btn-success">Login</button>
+                                                    <a href="#" style="color:#000">Create Account</a>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--body of home ends-->
+<footer></footer>
+</body>
+</html>
