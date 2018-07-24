@@ -35,7 +35,7 @@
                 <h4>Create Your Account</h4>
                 <br><br>
                 <form>
-                    <input type="radio" name="partner" value="Training Partner">
+                    <input type="radio" name="partner" value="Training Partner" checked>
                     Training Partner
                     <br>
                     <input type="radio" name="partner" value="Assessment Partner">
@@ -44,11 +44,11 @@
                 <br><br>
                 <br>
                 <div class="select">
-                    <input type="email" placeholder="Email ID" aria-label="First name" class="form-control">
+                    <input type="email" placeholder="Email ID" aria-label="First name" class="form-control" required>
                     <br>
-                    <input type="password" placeholder="Password" aria-label="First name" class="form-control">
+                    <input type="password" id="password" placeholder="Password" aria-label="First name" class="form-control">
                     <br>
-                    <input type="password" placeholder="Confirm Password" aria-label="First name" class="form-control">
+                    <input type="password" id="confirm_password" placeholder="Confirm Password" aria-label="First name" class="form-control" >
                 </div>
 
                 <br><br>
@@ -56,11 +56,11 @@
                 <br><br>
                 We will never sell it!
                 <br><br>
-                <input type="text" placeholder="First Name" class="form-control">
+                <input type="text" placeholder="First Name" class="form-control" required>
                 <br>
-                <input type="text" placeholder="Last Name" class="form-control">
+                <input type="text" placeholder="Last Name" class="form-control" required>
                 <br>
-                <input type="number" placeholder="Phone Number" class="form-control">
+                <input type="tel" placeholder="Phone Number" pattern="^\d{10}$" class="form-control" required>
                 <br><br>
                 <input type="submit" class="btn btn-outline-success">
             </div>
