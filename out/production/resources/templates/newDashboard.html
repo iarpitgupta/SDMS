@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7DsvzR-NK_zaXOmJ47NLMarcsXpVWFtA&callback=myMap"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Custom.css" type="">
+    <script>
+        $(function () {
+            $("header").load("./Header.html");
+            $("footer").load("./Footer.html");
+        });
+    </script>
+    <title>Hello, world!</title>
+</head>
+<body>
+<!-- As a link -->
+<header></header>
+
+<!-- As a sidebar -->
+
+<div id="wrapper" style="height:100%!important;">
+
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    Skill India
+                </a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-home"></i>Dashboard</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-briefcase"></i> Registeration</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-file-import"></i>Import/a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-link"></i> FAQ</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-users"></i> Batches</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- body of dashboard-->
+<div class="container">
+    <div class="panel-main" style="margin-left:260px;">
+        <div class="d-inline-block bg-sucess rounded border margin-panel mt-5 Custom-panel">
+            <div class="card-header" style="color:white">Panel 1</div>
+            <div class="card-body">
+                <h5 class="card-title" th:text='${NoOfCandidateAssessed}'></h5>
+            </div>
+        </div>
+        <div class="d-inline-block bg-warning rounded border margin-panel mt-5 Custom-panel">
+            <div class="card-header " style="color:white">Panel 1</div>
+            <div class="card-body">
+                <h5 class="card-title" th:text='${NoOfCertfiedCandidate}'></h5>
+            </div>
+        </div>
+        <div class="d-inline-block bg-primary rounded border margin-panel mt-5 Custom-panel">
+            <div class="card-header" style="color:white">Panel 1</div>
+            <div class="card-body">
+                <h5 class="card-title" th:text='${NoOfTrainingCentre}'></h5>
+            </div>
+        </div>
+        <div class="d-inline-block bg-success rounded borde margin-panel mt-5 Custom-panel">
+            <div class="card-header " style="color:white">Panel 1</div>
+            <div class="card-body">
+                <h5 class="card-title" th:text='${NoOfTrainingPartner}'></h5>
+            </div>
+        </div>
+    </div>
+    <div class="container graphImage" style="margin-left:120px; ">
+        <div class="card-deck mt-5">
+            <div class="card">
+                <img class="card-img-top"
+                     src="https://cdn.dribbble.com/users/20368/screenshots/2703946/graph-design.gif"
+                     alt="Card image cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top"
+                     src="https://cdn.dribbble.com/users/20368/screenshots/2703946/graph-design.gif"
+                     alt="Card image cap">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container graphImage " style="margin-left:260px;">
+    <div class="mt-5 mb-4">
+        <div class="card mb-5">
+            <div class="card-body table-info clearfix">
+                <h5 class="card-title">Top Training institutes</h5>
+                <table class="table table-hover table-light border">
+                    <thead>
+                    <tr>
+                        <th scope="col" class="border">Sno</th>
+                        <th scope="col" class="border">Name</th>
+                        <th scope="col" class="border">Number of Candidate Placed</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="item :${tp}">
+                        <th scope="row" class="border" th:text="${item.tp.TrainingPart}"></th>
+                        <td class="border">Mark</td>
+                        <td class="border">Otto</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="border">2</th>
+                        <td class="border">Jacob</td>
+                        <td class="border">Thornton</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="border">3</th>
+                        <td class="border">Larry the Bird</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--body of dashboard ends-->
+<footer>
+</footer>

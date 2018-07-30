@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="Custom.css" type="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <title>Dashboard</title>
+
+    <!--highcharts-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="highcharts.js"/>
+</head>
+<style>
+
+    @media(min-width:768px){
+        .list1{
+            display:none!important;
+        }
+        li{
+            text-decoration: none;
+        }
+
+    }
+
+</style>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<body>
+<!-- As a link -->
+<!-- As a sidebar -->
+<div class="pos-f-t list1" id= "Dashboard">
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <h5 class="text-white h4">Skill India</h5>
+            <ul>
+                <li>
+                    <a href="#" class="text-white"><i class="fas fa-home "></i>Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"  class="text-white"><i class="fas fa-briefcase"></i> Registeration</a>
+                </li>
+                <li>
+                    <a href="#"  class="text-white"><i class="fas fa-file-import"></i>Import</a>
+
+                </li>
+                <li>
+                    <a href="#"  class="text-white"><i class="fas fa-link"></i> FAQ</a>
+                </li>
+                <li>
+                    <a href="#"  class="text-white"><i class="fas fa-users"></i> Batches</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+</div>
+<!--Sidebar for mobile-->
+<div id="wrapper" style="height:100%!important;">
+
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand ">
+                <a href="#" style="font-size:20px;font-weight: bold;">
+                    Skill India
+                </a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-home"></i>Dashboard</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-briefcase"></i> Registeration</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-file-import"></i>Import</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-link"></i> FAQ</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-users"></i> Batches</a>
+            </li>
+        </ul>
+    </div></div>
+
+
+<!-- body of dashboard-->
+<div class="container position-relative">
+    <button type="button" class="btn btn-dark position-absolute logout mt-3"><i class="fas fa-power-off" style="color:white;"></i></button>
+
+    <div class="panel-main" style="margin-left:150px;">
+        <div class="d-inline-block bg-sucess rounded border margin-panel mt-5 Custom-panel " >
+            <div class="card-header" style="color:white">Candidates Enrolled</div>
+            <div class="card-body position-relative">
+                <h5 class="card-title font-weight-bold text-center" style="color:white" th:text='${NoOfCandidateAssessed}'></h5>
+                <i class="fas fa-users position-absolute" style="right:80px;top:45px;color:white;font-size:25px;"></i>
+            </div>
+        </div>
+        <div class="d-inline-block bg-warning rounded border margin-panel mt-5 Custom-panel">
+            <div class="card-header "style="color:white">Candidates Assessed
+            </div>
+            <div class="card-body position-relative">
+                <h5 class="card-title font-weight-bold text-center" style="color:white" th:text='${NoOfCertfiedCandidate}'></h5>
+                <i class="fas fa-user-check position-absolute" style="right:80px;top:45px;color:white;font-size:25px;"></i>
+
+            </div>
+        </div>
+        <div class="d-inline-block bg-primary rounded border margin-panel mt-5 Custom-panel">
+            <div class="card-header" style="color:white">Candidates Certified</div>
+            <div class="card-body position-relative">
+                <h5 class="card-title font-weight-bold text-center" style="color:white" th:text='${NoOfTrainingCentre}'></h5>
+                <i class="fas fa-certificate position-absolute" style="right:80px;top:45px;color:white;"></i>
+            </div>
+        </div>
+        <div class="d-inline-block bg-success rounded borde margin-panel mt-5 Custom-panel panelw" >
+            <div class="card-header "style="color:white ">Training Partners</div>
+            <div class="card-body position-relative">
+                <h5 class="card-title font-weight-bold text-center" style="color:white" th:text='${NoOfTrainingPartner}'></h5>
+                <i class="fas fa-handshake position-absolute" style="right:80px;top:45px;color:white;"></i>
+            </div></div></div></div>
+<div class="container graphImage" style="margin-left:250px; ">
+    <div class="card-deck mt-5">
+        <div class="card" id="percentage-training">
+            <!--<img class="card-img-top" src="https://cdn.dribbble.com/users/20368/screenshots/2703946/graph-design.gif" alt="Card image cap">-->
+        </div><div class="card" id="top-institute">
+        <!--<img class="card-img-top" src="https://cdn.dribbble.com/users/20368/screenshots/2703946/graph-design.gif" alt="Card image cap">-->
+    </div>
+    </div></div>
+</div>
+<div class="container graphImage " style="margin-left:250px;">
+    <div class="mt-5 mb-4">
+        <div class="card mb-5 ">
+            <div class="card-body table-secondary clearfix position-relative">
+                <form class="form-inline my-2 my-lg-0 float-right">
+                    <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
+                </form>
+
+                <h5 class="card-title" style="color:dark-grey">Top Training institutes</h5>
+                <table class="table table-hover table-light border">
+                    <thead>
+                    <tr>
+                        <th scope="col" class="border">Sno</th>
+                        <th scope="col" class="border">Institutes</th>
+                        <th scope="col" class="border" >Candidates Places</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="item :${tp}">
+                        <th scope="row" class="border" th:text="${item.trainingPartnerId}">1</th>
+                        <td class="border" th:text="${item.trainingPartnerName}">Mark</td>
+                        <td class="border" th:text="${item.cnt}">Otto</td>
+                    </tr>
+                    <tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--body of dashboard ends-->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
