@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="hover.css">
+    <link rel="stylesheet" type="text/css" href="SideNav.css">
+    <link rel="stylesheet" type="text/css" href="TPForm.css">
+    <!--<script>
+        $(document).ready(function () {
+            var start = 1900;
+            var end = new Date().getFullYear();
+            var options = "";
+            for (var year = start; year <= end; year++) {
+                options += "<option value=year>" + year + "</option>";
+            }
+            document.getElementById("year").innerHTML = options;
+        });
+    </script>-->
+    <!--<script>
+        function address() {
+            var b = $("input[name$='Address']").length();
+            if (b == 0) {
+                alert("Input data");
+            }
+        }
+    </script>-->
+    <script>
+        $(document).ready(function () {
+
+            //console.log(abc);
+            /*$('#yearOfEstablishment').change(function(){
+                var abc= new Date($('#yearOfEstablishment').value);
+                var date=abc.getDate();
+                var month=abc.getMonth();
+                var year=abc.getFullYear();
+                alert(date+month+year);
+            });*/
+            //alert("insert the date");
+            $('#name').blur(function () {
+                var name=$('#name').val();
+                if(name=="")
+                    alert("Name cannot be empty!!!")
+            });
+            $('#address').blur(function () {
+                var address=$('#address').val();
+                if(address=="")
+                alert("Address cannot be empty!!!")
+            });
+            $('#city').blur(function () {
+                var city=$('#city').val();
+                if(city=="")
+                    alert("City cannot be empty!!!")
+            });
+            $('#nameMember').blur(function () {
+                var nameMember=$('#nameMember').val();
+                if(city=="")
+                    alert("Name cannot be empty!!!")
+            });
+            $('#designationMember').blur(function () {
+                var designationMember=$('#designationMember').val();
+                if(designationMember=="")
+                    alert("Designation cannot be empty!!!")
+            });
+            $('#contactMemeber').blur(function () {
+                var city=$('#contactMemeber').val();
+                if(city=="")
+                    alert("Contact Number cannot be empty!!!")
+                if(city.length<10)
+                    alert("Contact Number cannot be less than 10 digits!!!")
+                if(city.length>10)
+                    alert("Contact Number cannot be greater than 10 digits!!!")
+            });
+            $('#emailMember').blur(function () {
+                var emailMember=$('#emailMember').val();
+                if(emailMember=="")
+                    alert("Email Id cannot be empty!!!")
+            });
+            $('#educationMember').blur(function () {
+                var eductionMember=$('#educationMember').val();
+                if(educationMember=="")
+                    alert("Education Qualification cannot be empty!!!")
+            });
+            $('#nameOH').blur(function () {
+                var nameOH=$('#nameOH').val();
+                if(nameOH=="")
+                    alert("Name cannot be empty!!!")
+            });
+            $('#designationOH').blur(function () {
+                var designationOH=$('#designationOH').val();
+                if(designationOH=="")
+                    alert("Designation cannot be empty!!!")
+            });
+            $('#educationalOH').blur(function () {
+                var eductionOH=$('#educationalOH').val();
+                if(eductionOH=="")
+                    alert("Education Qualification cannot be empty!!!")
+            });
+            $('#emailOH').blur(function () {
+                var emailOH=$('#emailOH').val();
+                if(emailOH=="")
+                    alert("Email cannot be empty!!!")
+            });
+            $('#experienceOH').blur(function () {
+                var experienceOH=$('#experienceOH').val();
+                if(experienceOH=="")
+                    alert("Experience cannot be empty!!!")
+            });
+            $('#nameAC').blur(function () {
+                var nameAC=$('#nameAC').val();
+                if(nameAC=="")
+                    alert("Name cannot be empty!!!")
+            });
+            $('#designationAC').blur(function () {
+                var designationAC=$('#designationAC').val();
+                if(designationAC=="")
+                    alert("Designation cannot be empty!!!")
+            });
+            $('#educationalAC').blur(function () {
+                var eductionAc=$('#educationalAC').val();
+                if(eductionAC=="")
+                    alert("Education Qualification cannot be empty!!!")
+            });
+            $('#emailAC').blur(function () {
+                var emailAC=$('#emailAC').val();
+                if(emailAC=="")
+                    alert("Email cannot be empty!!!")
+            });
+            $('#experienceAC').blur(function () {
+                var experienceAC=$('#experienceAC').val();
+                if(experienceAC=="")
+                    alert("Experience cannot be empty!!!")
+            });
+            $('#nameSPOC').blur(function () {
+                var nameSPOC=$('#nameSPOC').val();
+                if(nameSPOC=="")
+                    alert("Name cannot be empty!!!")
+            });
+            $('#designationSPOC').blur(function () {
+                var designationSPOC=$('#designationSPOC').val();
+                if(designationSPOC=="")
+                    alert("Designation cannot be empty!!!")
+            });
+            $('#educationalSPOC').blur(function () {
+                var eductionSPOC=$('#educationalSPOC').val();
+                if(eductionSPOC=="")
+                    alert("Education Qualification cannot be empty!!!")
+            });
+            $('#emailSPOC').blur(function () {
+                var emailSPOC=$('#emailSPOC').val();
+                if(emailSPOC=="")
+                    alert("Email cannot be empty!!!")
+            });
+            $('#experienceSPOC').blur(function () {
+                var experienceSPOC=$('#experienceSPOC').val();
+                if(experienceSPOC=="")
+                    alert("Experience cannot be empty!!!")
+            });
+            $('#nameCenter').blur(function () {
+                var nameCenter=$('#nameCenter').val();
+                if(nameCenter=="")
+                    alert("Name of Center cannot be empty!!!")
+            });
+            $('#submit').click(function () {
+                alert("Saving File in Database")
+            });
+            $('#yearOfEstablishment').blur(function () {
+                console.log($('#yearOfEstablishment').val());
+                var inputDate=$('#yearOfEstablishment').val();
+                var d=new Date();
+                var date=d.getDate();
+                var month=d.getMonth();
+                var year=d.getFullYear();
+                var parsedCurrentDate=year+"-"+month+"-"+date;
+                console.log(parsedCurrentDate);
+                if(Date.parse(parsedCurrentDate)>Date.parse(inputDate)){}
+                else
+                    alert("Input Date is greater than Current Date")
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function createRowManagement()
+        {
+            var table = document.getElementById("addRemoveManagement");
+            var y=$('#addRemoveManagement').find(":input");
+            console.log(y[0].value);
+            console.log(y[1].value);
+            console.log(y[2].value);
+            console.log(y[3].value);
+            console.log(y[4].value);
+            console.log(y[5].value);
+            var z=y[0].value;
+            $.ajax({url:"/add/"+y[0].value+"/"+y[1].value+"/"+y[2].value+"/"+y[3].value+"/"+y[4].value+"/"+y[5].value,success:function (result) {
+                }});
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+            var cell6 = row.insertCell(5);
+            cell1.innerHTML = '<input type="text" placeholder="Name" >';
+            cell2.innerHTML = "<input type='text' placeholder='Designation'  >";
+            cell3.innerHTML = "<input type='number' placeholder='Contact No' >";
+            cell4.innerHTML = "<input type='email' placeholder='Email Id' >";
+            cell5.innerHTML = "<input type='text' placeholder='Education Qualification' >";
+            cell6.innerHTML = "<input type='text' placeholder='Experience' >";
+        }
+        function createRowStaff()
+        {
+            var table = document.getElementById("addRemoveStaff");
+            var y=$('#addRemoveStaff').find(":input");
+            var z=document.getElementById("regularVisiting");
+            var regularVisiting=z.options[z.selectedIndex].value;
+            $.ajax({url:"/addstaff/"+y[0].value+"/"+y[1].value+"/"+y[2].value+"/"+y[3].value+"/"+y[4].value+"/"+y[5].value+"/"+regularVisiting,success:function (result) {
+                }});
+            console.log(y);
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+            var cell6 = row.insertCell(5);
+            cell1.innerHTML = "<input type='text' name='nameStaff' placeholder='Name'>";
+            cell2.innerHTML = "<input type='text'  placeholder='Designation'>";
+            cell3.innerHTML = "<input type='number' placeholder='Contact No'>";
+            cell4.innerHTML = "<input type='email' placeholder='Email Id'>";
+            cell5.innerHTML = "<input type='text' placeholder='Education Qualification'>";
+            cell6.innerHTML = "<select name=\"state\" class=\"form-control form-control-sm\" >\n" +
+                "                                            <option value=\"Regular\" selected>Regular\n" +
+                "                                            </option>" +
+                "                                        <option value=\"Visiting\" selected>Visiting\n" +
+                "                                        </option></select>";
+        }
+        function deleterowManagement()
+        {
+            var table = document.getElementById("addRemoveManagement");
+            var y=$('#addRemoveManagement').find(":input");
+            $.ajax({url:"/remove/"+y[0].value+"/"+y[1].value+"/"+y[2].value+"/"+y[3].value+"/"+y[4].value+"/"+y[5].value,success:function (result) {
+                }});
+            var x = document.getElementById("addRemoveManagement").rows.length;
+            if(x>1){
+
+                document.getElementById("addRemoveManagement").deleteRow(0);
+            }
+            else{
+                alert("Cannot delete more rows");
+            }
+        }
+        function deleteRowStaff()
+        {
+            var y=$('#addRemoveStaff').find(":input");
+            $.ajax({url:"/removestaff/"+y[0].value+"/"+y[1].value+"/"+y[2].value+"/"+y[3].value+"/"+y[4].value+"/"+y[5].value,success:function (result) {
+
+                }});
+            var x = document.getElementById("addRemoveStaff").rows.length;
+            if(x>1)
+            {
+                document.getElementById("addRemoveStaff").deleteRow(0);
+            }
+            else{
+                alert("Cannot delete more rows");
+            }
+        }
+    </script>
+    <title> Training Affiliation Page</title>
+</head>
+<body>
+<hr style="border-width: 2px;">
+<div class="container-fluid">
+    <div class="row">
+        <form action="#" th:action="@{/tp}" th:object="${trainingPartner}" method="post"
+              class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+            <div class="panel-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <button type="button" class="btn btn class primary col-lg-12 col-sm-12 col-xs-12 col-md-12"
+                                    data-toggle="collapse" href="#collapse1">Basic Information
+                            </button>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <div>
+                            <div class="form-group">
+                                <p>Oragnization name</p>
+                                <label>Name of Training Partner<span style="color: red">*</span></label> : <br> <input type="text"
+                                                                                                      name="Address"
+                                                                                                      required
+                                                                                                      id="name" th:field="*{name}"><br><br>
+                                <label>Address<span style="color: red">*</span></label> : <br> <input type="text"
+                                                                                                      name="Address"
+                                                                                                      required
+                                                                                                      id="address"
+                                                                                                      th:field="*{address}"><br><br>
+
+                                <label>City<span style="color: red">*</span></label> : <br> <input type="text"
+                                                                                                   name="City"
+                                                                                                   id="city"
+                                                                                                   required
+                                                                                                   th:field="*{city}"><br><br>
+                                <label>State<span style="color: red">*</span></label> : <br> <select id="State" name="state" class="form-control form-control-sm" required>
+                                <option value="Andaman and Nicobar Islands" selected>Andaman and
+                                    Nicobar Islands
+                                </option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli
+                                </option>
+                                <option value="Daman and Diu">Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Orissa">Orissa</option>
+                                <option value="Pondicherry">Pondicherry</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Tamil Nadu">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttaranchal">Uttarakhand</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="West Bengal">West Bengal</option>
+                            </select><br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <button type="button" class="btn btn class primary col-lg-12 col-sm-12 col-xs-12 col-md-12"
+                                    data-toggle="collapse" href="#collapse2">Organisation Details
+                            </button>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <div>
+                            <div class="form-group">
+                                <label>Year of Establishment</label><span style="color: red">*</span> : <input id="yearOfEstablishment"
+                                    type="date" th:field="*{yearOfEstablishment}" required>
+                                <br><br>
+                                <label>Qualification Packs</label><span style="color: red">*</span> :<select name="qualificationPack" class="form-control form-control-sm" required>
+                                <option value="Q1">Q1</option>
+                                <option value="Q2">Q2</option>
+                                <option value="Q3">Q3</option>
+                                <option value="Q4">Q4</option>
+                            </select>
+                                <br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <button type="button" class="btn btn class primary col-lg-12 col-sm-12 col-xs-12 col-md-12"
+                                    data-toggle="collapse" href="#collapse4">Personnel Details
+                            </button>
+                        </h4>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse">
+                        <div>
+                            <!--<div class="form-group table-responsive" id="addRemove">-->
+                                <label>Details Of Directors and Management Team Members</label>
+                                <!--<div id="addMember" class="col-lg-12 col-sm-12 col-xs-12 col-md-12"
+                                     style="display: inline-flex">
+                                    <input placeholder="Name" type="text" required th:field="*{memberName}"/>
+                                    <input placeholder="Designation" type="text" required
+                                           th:field="*{memberDesignation}"/>
+                                    <input placeholder="EmailId" type="email" required th:field="*{memberEmailId}"/>
+                                    <input placeholder="Education Qualification" type="text" required
+                                           th:field="*{memberEducationalProfile}"/>
+                                    <input placeholder="Experience" type="text" required
+                                           th:field="*{memberExperience}"/>
+                                    <label for="uploadMember" class="btn btn-primary btn-block btn-outlined">
+                                        Upload Cvs</label>
+                                    <input id="uploadMember" placeholder="Upload Cvs" type="file"
+                                           value="Upload Cvs" style="display: none;"/>
+                                </div>-->
+                            <div class="form-group">
+                                <table class="table table-responsive table-sm" id="addRemoveManagement">
+                                    <tr>
+                                        <td><input type="text" placeholder="Name" id ="nameMember" required></td>
+                                        <td><input type="text" placeholder="Designation" required id="designationMember" ></td>
+                                        <td><input type="number" placeholder="Contact No." required id="contactMemeber" ></td>
+                                        <td><input type="email" placeholder="Email Id" required id="emailMember" ></td>
+                                        <td><input type="text" placeholder="Education Qualification" required id="educationMember" ></td>
+                                        <td><input type="text" placeholder="Experience" name="assessors" required id="experienceMember"></td>
+                                        <!--<td><input type="file" placeholder="Upload CV" name="cv" required id="cvMember"></td>-->
+                                    </tr>
+                                </table>
+                                <button type="button" onclick="createRowManagement()" class="btn btn-primary">Add</button>
+                                <button type="button" onclick="deleterowManagement()" class="btn btn-danger">Remove</button>
+                            </div>
+                                <label>Details Of Training Staff</label>
+                            <div class="form-group">
+                                <table class="table table-responsive table-sm" id="addRemoveStaff">
+                                    <tr>
+                                        <td><input type="text" id="nameStaff" placeholder="Name" required ></td>
+                                        <td><input type="text" id="designationStaff" placeholder="Designation" required></td>
+                                        <td><input type="number" id="conatactStaff" placeholder="Contact No." required></td>
+                                        <td><input type="email" id="emailStaff" placeholder="Email Id" required></td>
+                                        <td><input type="text" id="experienceStaff" placeholder="Industrial Experience" required></td>
+                                        <td><select name="type" id="regularVisiting" required>
+                                            <option value="Regular" selected>Regular
+                                            </option>
+                                        <option value="Visiting">Visiting
+                                        </option></select></td>
+                                        <!--<td><input type="file" placeholder="Upload CV" required></td>-->
+                                    </tr>
+                                </table>
+                                <button type="button" onclick="createRowStaff()" class="btn btn-primary">Add</button>
+                                <button type="button" onclick="deleteRowStaff()" class="btn btn-danger">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <button type="button" class="btn btn class primary col-lg-12 col-sm-12 col-xs-12 col-md-12"
+                                    data-toggle="collapse" href="#collapse5">Information
+                            </button>
+                        </h4>
+                    </div>
+                    <div id="collapse5" class="panel-collapse collapse">
+                        <div>
+                            <div class="form-group">
+                                <label>Name of Center</label><span style="color: red">*</span> : <input
+                                    type="text" name="center" id="nameCenter" required th:field="*{nameOfCenter}" th:text="${trainingPartner.nameOfCenter}">
+                                <br><br>
+                                <label>Details Of Training Staff</label>
+                                <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12"
+                                     style="display: inline-flex">
+                                    <input placeholder="Name(OH)" id="nameOH" type="text" required th:field="*{nameOH}" th:text="${trainingPartner.nameOH}"/>
+                                    <input placeholder="Designation" id="designationOH" type="text" required th:field="*{designationOH}" th:text="${trainingPartner.designationOH}"/>
+                                    <input placeholder="EmailId" id="emailOH" type="email" required th:field="*{emailIdOH}" th:text="${trainingPartner.emailIdOH}"/>
+                                    <input placeholder="Education Qualification" id="educationOH" type="text" required th:field="*{educationQualificationOH}" th:text="${trainingPartner.educationQualificationOH}"/>
+                                    <input placeholder="Experience" id="experienceOH" type="text" required th:field="*{experienceOH}" th:text="${trainingPartner.experienceOH}"/>
+                                    <!--<label for="uploadOH" class="btn btn-primary btn-block btn-outlined"> Upload
+                                        Cvs</label>
+                                    <input id="uploadOH" placeholder="Upload Cvs" type="file" required
+                                           value="Upload Cvs" style="display: none;" th:file="*{cvsOH}"/>-->
+                                </div>
+                                <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12"
+                                     style="display: inline-flex">
+                                    <input placeholder="Name(AC)" id="nameAC" type="text" required th:field="*{nameAC}"/>
+                                    <input placeholder="Designation" id="designationAC" type="text" required th:field="*{designationAC}"/>
+                                    <input placeholder="EmailId" id="emailAC" type="email" required th:field="*{emailIdAC}"/>
+                                    <input placeholder="Education Qualification" id="educationalOH" type="text" required th:field="*{educationQualificationAC}"/>
+                                    <input placeholder="Experience" id="experienceAC" type="text" required th:field="*{experienceAC}"/>
+                                    <!--<label for="uploadAC" class="btn btn-primary btn-block btn-outlined"> Upload
+                                        Cvs</label>
+                                    <input id="uploadAC" placeholder="Upload Cvs" type="file" required
+                                           value="Upload Cvs" style="display: none;" th:file="*{cvsAC}"/>-->
+                                </div>
+                                <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12"
+                                     style="display: inline-flex">
+                                    <input placeholder="Name(SPOC)" id="nameSPOC" type="text" required th:field="*{nameSPOC}" th:text="${trainingPartner.nameSPOC}"/>
+                                    <input placeholder="Designation" type="text" id="designationSPOC" required th:field="*{designationSPOC}" th:text="${trainingPartner.designationSPOC}"/>
+                                    <input placeholder="EmailId" type="email" id="emailSPOC" required th:field="*{emailIdSPOC}" th:text="${trainingPartner.emailIdSPOC}"/>
+                                    <input placeholder="Education Qualification" id="educationalSPOC" type="text" required th:field="*{educationQualificationSPOC}" th:text="${trainingPartner.educationQualificationSPOC}"/>
+                                    <input placeholder="Experience" type="text" id="experienceSPOC" required th:field="*{experienceSPOC}" th:text="${trainingPartner.experienceSPOC}"/>
+                                    <!--<label for="uploadSPOC" class="btn btn-primary btn-block btn-outlined">
+                                        Upload Cvs</label>
+                                    <input id="uploadSPOC" placeholder="Upload Cvs" type="file" required
+                                           value="Upload Cvs" style="display: none;" th:file="*{cvsSPOC}"/>-->
+                                </div>
+                                <br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <button type="button" class="btn btn class primary col-lg-12 col-sm-12 col-xs-12 col-md-12"
+                                    data-toggle="collapse" href="#collapse6">Declaration and Self Attestation
+                            </button>
+                        </h4>
+                    </div>
+                    <div id="collapse6" class="panel-collapse collapse">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="declare" required>
+                            <label class="custom-control-label" for="declare">I hereby, declare that the details
+                                mentioned above are true and best of my knowledge. In case of any of the above
+                                information is found false or untrue SCGJ can take strict action.</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="agree" required>
+                            <label class="custom-control-label" for="agree"> I Agree, the Terms &
+                                Conditions</label>
+                        </div>
+                        <br>
+                        <div style="float: right">
+                            <input type="submit" class="btn btn-success" value="Submit" id="submit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
