@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+
+.colorclass{
+ border-radius: 5px;
+    background-color: #d9d9d9;
+    padding: 20px;
+	margin:30px;
+}
+
+.colorclass1{
+ border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+	margin:30px;
+}
+
+table{
+	background-color: white;
+	
+}
+th{
+background-color:green;
+
+color:white;
+}
+p{
+font-weight: bold;
+}
+  </style>
+	<!--<script>-->
+        <!--$(document).ready(function () {-->
+            <!--if($("#batch1").text()=="pending")-->
+            <!--{-->
+                <!--$("#t2id").remove();-->
+            <!--}-->
+
+        <!--});-->
+	<!--</script>-->
+	<script>
+        $(document).ready(function () {
+            if($("#batch1 #status").text()=="rejected" || $("#batch1 #status").text()=="incomplete" )
+            {
+                $("#t2id").remove();
+                $("#t3id").remove();
+            }
+
+        });
+	</script>
+
+
+</head>
+<!-- body details---->
+
+<body>
+
+
+<!-- header details---->
+<div class="container-fluid">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6">
+				<img src="SCGJLogo.png" class="img-thumbnail" alt="Logo" width="150" height="100">
+			</div>
+			
+			<div class="col-sm-6">
+				<p style="text-align-last:right;"><b> Username</b> </p>
+				<img src="logout.png" class="img-thumbnail" alt="logout" width="30" height="20" align="right">
+			</div>
+		</div>
+    </div>
+
+<!--welcome statement---->
+	
+				
+			
+		
+<!-------------t1--------->
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="colorclass" th:each="item:${shivangi}">
+				<p style="color:#006600; text-align:center" th:text="${item.getUsername()}" ></p>
+				<table class="table table-bordered">
+					<p>Application Status</p>
+					<thead>
+						<tr>
+							<th width="100px">Application ID</th>
+							<th width="100px">Date of submission</th>
+							<th width="100px">Submitted By</th>
+							<th width="100px">Status</th>
+							<th width="100px"> Action </th>
+							<th width="200px"> Comment </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="item:${shivangi}">
+							<td th:text="${item.getAid()}"></td>
+							<td th:text="${item.getDate()}"></td>
+							<td th:text="${item.getUsername()}"></td>
+							<td th:text="${item.getStatus()}" id="status"></td>
+							<td><a href="#">
+							<span class="glyphicon glyphicon-pencil"></span>
+							</a></td>
+							<td th:text="${item.getComments()}"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+<!-------------t2--------->
+
+
+	<div class="container-fluid" id = "t2id">
+		<div class="row">
+			<div class="colorclass">
+				<table class="table table-bordered" >
+					<p>Past Batch(es)</p>       
+					<thead>
+						<tr >
+							<th width="100px" >Batch ID</th>
+							<th width="100px"> TP Name|Email|Contact Number</th>
+							<th width="100px">Assessment date</th>
+							<th width="100px">District|State</th>
+							<th width="100px">No. of candidates </th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="item:${shivangi}">
+							<td th:text="${item.getBid()}"></td>
+							<td th:text="${item.getTpname()}"></td>
+							<td th:text="${item.getDate()}"></td>
+							<td th:text="${item.getDistrict()}"></td>
+							<td  th:text="${item.getStrength()}"></td>
+						</tr>
+      
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+<!-------------t3--------->
+
+	<div class="container-fluid" id="t3id">
+		<div class="row">
+			<div class="colorclass">
+				<table class="table table-bordered" >
+					<p>Proposed Batch(es)</p>       
+					<thead>
+						<tr>
+							<th width="100px" >Batch ID</th>
+							<th width="100px"> TP Name|Email|Contact Number</th>
+							<th width="100px">Assessment date</th>
+							<th width="100px">District|State</th>
+							<th width="100px">No. of candidates </th>
+							<th width="100px">Action</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>
+
+
+							</td>
+							<td><a href="#">
+								<span ><button type="button" onclick="">Accept</button>
+								<button type="button" onclick="">Reject</button>
+								></span>
+							</a></td>
+						</tr>
+      
+					</tbody>
+				</table>
+			</div>
+		</div>		
+	</div>
+	
+	<!-------------t4--------->
+
+	<div class="container-fluid" id="t4id">
+		<div class="row">
+			<div class="colorclass">
+				<table class="table table-bordered" >
+					<p>Confirmed Batch(es)</p>
+					<thead>
+						<tr>
+							<th width="100px" >Batch ID</th>
+							<th width="100px"> TP Name|Email|Contact Number</th>
+							<th width="100px">Assessment date</th>
+							<th width="100px">District|State</th>
+							<th width="100px">No. of candidates </th>
+
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+      
+					</tbody>
+				</table>
+			</div>
+		</div>		
+	</div>
+
+
+
+<!-- footer details---->
+	<div>
+
+			<p> footer comes here </p>
+		</div>
+</div>
+</body>
+</html>
