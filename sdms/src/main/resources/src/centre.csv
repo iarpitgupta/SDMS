@@ -1,0 +1,4 @@
+centreId,centreName,centrePOCContactName,centreAddress,district,state,trainingPartnerId
+Integer,Any (Except Integer),Any (Except Integer ),Any ,Letters,Letters,Integer
+1,To The New Digital,Kiran Bahuguna,"sector-127,Noida",Noida,Uttar Pradesh,1,
+2,Experia,Shubham,janakpuri,New Delhi,Delhi,1,

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:C="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="hover.css" rel="stylesheet" type="text/css" >
+    <link href="SideNav.css" rel="stylesheet" type="text/css" >
+    <link href="ABForm.css" rel="stylesheet" type="text/css" >
+    <title>Affiliation Page</title>
+
+    <script type="text/javascript">
+
+        function phonenumber(phone) {
+            var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+            if(inputtxt.value.match(phoneno)) {
+                return true;
+            }
+            else {
+                alert("message");
+                return false;
+            }
+        }
+    	// function disable()
+    	// {
+    	// 	if(document.getElementById('experience_yes').checked)
+		 //    	{
+		 //    		document.getElementById("domain1").disabled = false;
+		 //    		document.getElementById("domain2").disabled = false;
+		 //    	}
+    	// 	else if(document.getElementById('experience_no').checked)
+		 //    	{
+		 //    		document.getElementById("domain1").disabled = true;
+		 //    		document.getElementById("domain2").disabled = true;
+		 //    	}
+    	// }
+        //
+    	// function disable1()
+    	// {
+    	// 	if(document.getElementById('recognized_yes').checked)
+		 //    	{
+		 //    		document.getElementById("recognized1").disabled = false;
+		 //    		document.getElementById("recognized2").disabled = false;
+		 //    		document.getElementById("recognized3").disabled = false;
+		 //    		document.getElementById("recognized4").disabled = false;
+		 //    	}
+    	// 	else if(document.getElementById('recognized_no').checked)
+		 //    	{
+		 //    		document.getElementById("recognized1").disabled = true;
+		 //    		document.getElementById("recognized2").disabled = true;
+		 //    		document.getElementById("recognized3").disabled = true;
+		 //    		document.getElementById("recognized4").disabled = true;
+		 //    	}
+    	// }
+
+
+        // function deleterow()
+    		// {
+    		// 	var x = document.getElementById("managerial").rows.length;
+    		// 	if(x>1){
+    		//
+    		// 		document.getElementById("managerial").deleteRow(0);
+    		// 	}
+    		// 	else{
+    		// 		alert("Cannot delete more rows");
+    		// 	}
+		// 	}
+        //
+		// function createrow()
+		// {
+		// 	var table = document.getElementById("managerial");
+    		// var row = table.insertRow(0);
+    		// var cell1 = row.insertCell(0);
+    		// var cell2 = row.insertCell(1);
+    		// var cell3 = row.insertCell(2);
+    		// var cell4 = row.insertCell(3);
+    		// var cell5 = row.insertCell(4);
+    		// cell1.innerHTML = "<input type='text' placeholder='Name' name='assessors' required>";
+    		// cell2.innerHTML = "<input type='text' placeholder='Designation' name='assessors' required>";
+    		// cell3.innerHTML = "<input type='number' placeholder='Contact No.'' name='assessors' required>";
+    		// cell4.innerHTML = "<input type='text' placeholder='Education Qualification' name='assessors' required>";
+    		// cell5.innerHTML = "<input type='text' placeholder='Experience' name='assessors' required>";
+		}
+
+    </script>
+</head>
+<body>
+<header>
+    <img src="../images/scgj_logo.jpg" alt="Unable to load logo"/>
+    <div style="display: block;float: right;margin-top: 20px">
+        <div style="display: inline-flex;">
+            <input class="form-control" type="text" placeholder="Search.."/>
+            <button class="btn" style="background-color: #00000000"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</header>
+<hr style="border-width: 2px;">
+<div class="container-fluid">
+    <div class="row" style="background-color: rgb(1, 183, 212);">
+        <div class="dropdown col-lg-1 col-sm-1 col-xs-1 col-md-1">
+            <button class="dropbtn">HOME</button>
+        </div>
+        <div class="dropdown col-lg-1.6 col-sm-1.6 col-xs-1.6 col-md-1.6">
+            <button class="dropbtn">ABOUT US</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>3
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown col-lg-1.6 col-sm-1.6 col-xs-1.6 col-md-1.6">
+            <button class="dropbtn">INDUSTRY CONNECT</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown col-lg-1.6 col-sm-1.6 col-xs-1.6 col-md-1.6">
+            <button class="dropbtn">NATIONAL STANDARDS</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown col-lg-1.6 col-sm-1.6 col-xs-1.6 col-md-1.6">
+            <button class="dropbtn">AFFILIATION</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown col-lg-1.6 col-sm-1.6 col-xs-1.6 col-md-1.6">
+            <button class="dropbtn">PUBLICATION</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown col-lg-1.6 col-sm-1.6 col-xs-1.6 col-md-1.6">
+            <button class="dropbtn">CSR PROJECTS</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <form th:action="@{/apform}" th:object="${apAffiliationPOJO}" method="post">
+            <div class="form-group form">
+                <label>Agency Name</label>: <br><input type="text" name="assesmentAgencyName" required>
+                <br><br>
+                <label>State</label> : <br> <input type="text"  name="State" required>
+                <br><br>
+
+                <div class="form-group">
+                    <h3>Assessors</h3>
+                    <table class="table table-responsive table-sm" id="managerial">
+                        <tr>
+                            <td><input type="text" placeholder="Name" name="assesorName" required></td>
+                            <td><input type="text" placeholder="Designation" name="designation" required></td>
+                            <td><input type="email" placeholder="E-Mail" name="email" required></td>
+                            <td><input type="tel" name="contactNumber" placeholder="Contact Number" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"required /></td>
+                            <td><input type="text" placeholder="Education Qualification" name="qualification" required></td>
+                            <td><input type="text" placeholder="Experience" name="experience" required ></td>
+                        </tr>
+                    </table>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="Check1" required>
+                        <label class="form-check-label" for="Check1" >I herby, declare that details enter above are true
+                            and best to my knowledge.If found untrue or false SCGJ can take strict action</label>
+                    </div>
+                    <br>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="Check2" required>
+                        <label class="form-check-label" for="Check2">I Agree to all Terms and Conditions</label>
+                    </div>
+                    <button type="submit"  name="action" value="submit" class="btn btn-success" style="float: right;width: 120px;">Submit</button>
+                    <!--button type="submit" name="action" value="draft" class="btn btn-warning" style="float: right;width: 120px;">Save As Draft</button-->
+                </div></div>
+            </form>
+            </div>
+        </div>
+<hr style="margin-top: 150px">
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+                <span style="display: block;color: rgb(51, 51, 51);font-size: 18px;font-weight: 700">QuickLink</span>
+                <ul style="padding-left: 30px">
+                    <li><span style="display: block;color: rgb(51, 51, 51);">Home</span></li>
+                    <li><span style="display: block;color: rgb(51, 51, 51)">About Us</span></li>
+                    <li><span style="display: block;color: rgb(51, 51, 51)">Industry Connect</span></li>
+                    <li><span style="display: block;color: rgb(51, 51, 51)">National Standards</span></li>
+                    <li><span style="display: block;color: rgb(51, 51, 51)">Affiliation</span></li>
+                    <li><span style="display: block;color: rgb(51, 51, 51)">Publication</span></li>
+                    <li><span style="display: block;color: rgb(51, 51, 51)">State Linkages</span></li>
+                </ul>
+            </div>
+            <div id="googleMap" class="col-lg-8 col-sm-8 col-xs-8 col-md-8"
+                 style="padding-left: 0px;padding-right: 15px"></div>
+            <div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+                <span style="display: block;color: rgb(51, 51, 51);font-size: 18px;font-weight: 700">Locate Us</span>
+                3rd Floor, CBIP Building, Malcha Marg,
+                Chanakyapuri, New Delhi - 110021
+                <br>
+                Phone: 011-41792866
+                Email: info@sscgj.in
+            </div>
+        </div>
+        <script>
+            $(document).ready(function myMap() {
+                var mapProp = {
+                    center: new google.maps.LatLng(28.6020, 77.1881),
+                    zoom: 15
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                var marker = new google.maps.Marker({position: mapProp.center});
+                marker.setMap(map);
+            });
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7DsvzR-NK_zaXOmJ47NLMarcsXpVWFtA&callback=myMap"></script>
+        <hr>
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12"
+                 style="background-color: rgb(13, 147, 168);font-family: Lato, sans-serif; padding-bottom: 25px;padding-top: 25px;text-align: center;color: rgb(255,255,255);">
+                Copyright © 2016 sscgj.in - All Rights Reserved.
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
