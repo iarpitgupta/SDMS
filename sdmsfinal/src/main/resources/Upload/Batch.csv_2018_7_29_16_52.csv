@@ -1,0 +1,7 @@
+batchId,batchName,batchType,trainingPartnerId,centreId,trainerId,totalCandidatesInBatch,batchMode,batchStartDate,batchEndDate,jobRole,jobRoleCode,maximumMarksTheory,maximumMarksPractical,level,resultApproved,resultApprovedOnDate,totalPass,totalFail,totalNotAppeared,totalCertified,batchAssignmentDate,assessmentDate,agencyId,assessorId
+String,Any,PMKVY/NON-PMKVY,Any,Integer,Integer,Integer,Market Mode/Surya Mitra/NBCFDC,Date,Date,Any (Except Integer),Any,Integer/Decimal,Integer/Decimal,Integer,Yes/No,Date,Integer,Integer,Integer,Integer,Date,Date,Integer,Integer
+400899,400899,,NSDC-REGNo-14405,97632,,30,MM,,,Rooftop Solar Grid Engineer,,,,,Yes,2/5/2018,24,0,6,24,,12-02-2018,3,
+398056,398056,Non-PMKVY,NSDC-REGNo-12564,102328,,29,MNRE,22-12-2017,22-03-2018,Solar Pv Installer (Suryamitra),,,,,Yes,2/5/2018,12,17,0,12,,23-03-2018,10,
+401424,401424,,NSDC-REGNo-16561,106116,,29,MNRE,,,Solar Pv Installer (Suryamitra),,,,,Yes,2/5/2018,28,1,0,28,,19-03-2018,9,
+1702UK01A4BJSGJ/Q0101-0000F012,1702UK01A4BJSGJ/Q0101-0000F012,PMKVY,PMKVY_2821,6731,,11,PMKVY-STT,23-11-2017,15-03-2018,Solar PV Installer (Suryamitra),,,,,Yes,2/5/2018,6,0,5,6,,16-03-2018,18,
+1702UP000A11JSGJ/Q0101-0000F546,1702UP000A11JSGJ/Q0101-0000F546,PMKVY,PMKVY_45,2577,,30,PMKVY-STT,27-11-2017,21-02-2018,Solar PV Installer (Suryamitra),,,,,Yes,2/5/2018,17,1,12,17,,22-02-2018,10,

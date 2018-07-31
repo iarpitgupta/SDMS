@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" th:href="@{/arpit.css}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script>
+        function fnValidation() {
+
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            if ($("input[id$='txtemail']").val() == "") {
+                alert("Please enter Email Id.");
+                $("input[id$='txtemail']").focus();
+                return false;
+            }
+            else if (reg.test($("input[id$='txtemail']").val()) == false) {
+                alert("Please Enter correct Email.");
+                $("input[id$='txtemail']").focus();
+                return false;
+            }
+
+
+            if ($("input[id$='password']").val() == "") {
+                alert("Please Enter Password");
+                $("input[id$='password']").focus();
+                return false;
+            }
+            if ($("input[id$='confirm_password']").val() == "") {
+                alert("Please Enter Confirm Password");
+                $("input[id$='confirm_password']").focus();
+                return false;
+            }
+            /*if ($("input[id$='txtname']").val() == "") {
+                alert("Please Enter Name");
+                $("input[id$='txtname']").focus();
+                return false;
+            }
+*/
+
+           /* if ($("input[id$='lastname']").val() == "") {
+                alert("Please Enter Last Name");
+                $("input[id$='lastname']").focus();
+                return false;
+            }
+
+            if ($("input[id$='txtphn']").val() == "") {
+                alert("Please Enter Mobile No");
+                $("input[id$='txtphn']").focus();
+                return false;
+            }*/
+
+        }
+
+        function isNumberKey(evt) {
+            var charCode = (evt.charCode) ? evt.which : event.keyCode
+
+            if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46)
+                return false;
+        }
+
+        function fnCheckPwd() {
+            var pwd = $("input[id$='password']").val();
+            var confirmpwd = $("input[id$='confirm_password']").val();
+            if (pwd != confirmpwd) {
+                alert("Confirm Password should be same as Password");
+                $("input[id$='confirm_password']").focus();
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+<div th:include="Header :: header"></div>
+<div class="signup-form">
+    <p></p>
+    <div class="form-group">
+        <h4>Create Your Account</h4>
+        <p class="alert alert-danger" th:if="${error != null}" th:text="${error}" style="display: inline"></p><br><br>
+        <form id="form" action="#" th:action="@{/sign}" th:object="${user}" method="POST">
+            <input type="radio" name="partner" th:field="*{userRole}" value="Training Partner">
+            Training Partner
+            <br>
+            <input type="radio" name="partner" th:field="*{userRole}" value="Assessment Partner">
+            Assessment Partner
+            <br><br>
+            <br>
+            <div class="select">
+                <input type="email" id="txtemail" placeholder="Email ID" aria-label="First name" class="form-control"
+                       th:field="*{userName}">
+                <br>
+                <input type="password" id="password" placeholder="Password" aria-label="First name"
+                       class="form-control"
+                       th:field="*{userPassword}">
+                <br>
+                <input type="password" id="confirm_password" placeholder="Confirm Password" aria-label="First name"
+                       class="form-control" onchange="return fnCheckPwd();"><br>
+                <input type="submit" id="submit" class="btn btn-outline-success" onclick="return fnValidation()">
+            </div>
+        </form>
+    </div>
+    <br><br>
+</div>
+</div>
+<div th:include="Footer :: footer"></div>
+</body>
+</html>
